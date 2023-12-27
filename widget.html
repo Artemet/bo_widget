@@ -267,12 +267,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Public+Sans:wght@200&display=swap" rel="stylesheet">
-    <script>
-        //app_widget
-        window.addEventListener("load", function (){
-            const widget_html = `<div class="app_widget">
+    <div class="app_widget">
         <div class="phone">
-            <img src="res/iphone2.png" alt="" class="phone_form" draggable="false">
+            <img src="/iphone_image" alt="" class="phone_form" draggable="false">
             <div class="window">
                 <div class="window_options">
                     <div><svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></div>
@@ -281,11 +278,11 @@
                     <div class="information"><p>БЛИН Ветчина с сыром в <br> ПОДАРОК при заказе <br> доставки из приложения!</p></div>
                     <div class="qr_codes">
                         <div class="code">
-                            <div class="code_image"><img src="res/google_play_qr.png" alt="" draggable="false"></div>
+                            <div class="code_image"><img src="/google_play_qr" alt="" draggable="false"></div>
                             <a href="https://play.google.com/store/apps/details?id=com.smartofood.voblin" target="_blank">
                                 <div class="button">
                                     <div>
-                                        <img src="res/google_play.png" alt="" draggable="false">
+                                        <img src="/google_play_image" alt="" draggable="false">
                                     </div>
                                     <div>
                                         <p class="motivation">GET IN ON</p>
@@ -295,11 +292,11 @@
                             </a>
                         </div>
                         <div class="code">
-                            <div class="code_image"><img src="res/app_store_qr.png" alt="" draggable="false"></div>
+                            <div class="code_image"><img src="/app_store_qr" alt="" draggable="false"></div>
                             <a href="https://apps.apple.com/ru/app/%D0%B2%D0%BE-%D0%B1%D0%BB%D0%B8%D0%BD/id1633204428" target="_blank">
                                 <div class="button">
                                     <div>
-                                        <img src="res/app_store.png" alt="" draggable="false">
+                                        <img src="/app_store_image" alt="" draggable="false">
                                     </div>
                                     <div>
                                         <p class="motivation">Download on the</p>
@@ -317,7 +314,7 @@
                         <b>Установи <br> приложение</b>
                     </div>
                     <div>
-                        <img src="res/bo_logo.png" alt="">
+                        <img src="/bo_icon_image" alt="">
                     </div>
                     <div>
                         <p class="double_information">Все новости <br> и подарки <br> внутри!</p>
@@ -327,15 +324,17 @@
         </div>
     </div>
     <div class="mobile_app_widget">
-        <div><img src="res/bo_logo.png" alt="" draggable="false"></div>
+        <div><img src="/bo_icon_image" alt="" draggable="false"></div>
         <div class="text_part">
             <p class="motivation_text">БЛИН Ветчина с сыром в <br> ПОДАРОК при заказе <br> доставки из приложения!</p>
         </div>
         <div>
             <a href="" target="_blank"><button>Установить</button></a>
         </div>
-    </div>`;
-            document.querySelector("body").innerHTML += widget_html;
+    </div>
+    <script>
+        //app_widget
+        window.addEventListener("load", function (){
             function app_widget(){
                 //close_window
                 let open_widget = false;
