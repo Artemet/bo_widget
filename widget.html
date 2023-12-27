@@ -21,7 +21,7 @@
         height: 400px;
         width: 280px;
     }
-    .app_widget .window{
+    .app_widget .phone_window{
         position: absolute;
         right: 240px;
         bottom: 60px;
@@ -42,7 +42,7 @@
         display: grid;
         grid-gap: 6px;
     }
-    .app_widget .window .button{
+    .app_widget .phone_window .button{
         display: flex;
         margin: auto;
         align-items: center;
@@ -52,42 +52,42 @@
         border-radius: 5px;
         pointer-events: none;
     }
-    .app_widget .window .button img{
+    .app_widget .phone_window .button img{
         height: 23px !important;
         padding-right: 5px;
     }
-    .app_widget .window .button p{
+    .app_widget .phone_window .button p{
         margin: 0;
         font-weight: 400;
         color: white;
     }
-    .app_widget .window p.motivation{
+    .app_widget .phone_window p.motivation{
         font-size: 9px;
     }
-    .app_widget .window p.name{
+    .app_widget .phone_window p.name{
         font-size: 13px;
     }
-    .app_widget .window .window_options{
+    .app_widget .phone_window .window_options{
         padding: 5px;
         text-align: right;
     }
-    .app_widget .window .window_options svg{
+    .app_widget .phone_window .window_options svg{
         height: 20px;
         width: 20px;
         transition: 0.3s;
         cursor: pointer;
     }
-    .app_widget .window .window_options svg:hover{
+    .app_widget .phone_window .window_options svg:hover{
         transform: rotate(90deg);
     }
-    .app_widget .window .main_child{
+    .app_widget .phone_window .main_child{
         padding: 5px 20px;
     }
-    .app_widget .window .main_child .information{
+    .app_widget .phone_window .main_child .information{
         padding-left: 14px;
         padding-bottom: 5px;
     }
-    .app_widget .window p{
+    .app_widget .phone_window p{
         color: red;
         margin: 0;
         font-weight: 700;
@@ -95,22 +95,22 @@
         white-space: nowrap;
         margin-bottom: 5px;
     }
-    .app_widget .window .qr_codes{
+    .app_widget .phone_window .qr_codes{
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 1fr 1fr;
     }
-    .app_widget .window .code_image{
+    .app_widget .phone_window .code_image{
         text-align: center;
     }
-    .app_widget .window .qr_codes img{
+    .app_widget .phone_window .qr_codes img{
         height: 100px;
     }
-    .app_widget .window .qr_codes a{
+    .app_widget .phone_window .qr_codes a{
         text-decoration: none;
         transition: 0.3s;
     }
-    .app_widget .window .qr_codes a:hover{
+    .app_widget .phone_window .qr_codes a:hover{
         opacity: 0.7;
     }
     .app_widget .window_options{
@@ -272,7 +272,7 @@
     <div class="app_widget">
         <div class="phone">
             <img src="/iphone_image" alt="" class="phone_form" draggable="false">
-            <div class="window">
+            <div class="phone_window">
                 <div class="window_options">
                     <div><svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></div>
                 </div>
@@ -340,15 +340,15 @@
             function app_widget(){
                 //close_window
                 let open_widget = false;
-                const get_close_icon = document.querySelector(".app_widget .window .window_options svg");
+                const get_close_icon = document.querySelector(".app_widget .phone_window .window_options svg");
                 get_close_icon.addEventListener("click", function (){
-                    this.closest(".window").classList.add("window_closed");
+                    this.closest(".phone_window").classList.add("window_closed");
                     open_widget = true;
                 });
                 const get_phone = document.querySelector(".app_widget img.phone_form");
                 get_phone.addEventListener("click", function (){
                     if (open_widget === true){
-                        document.querySelector(".app_widget .window").classList.remove("window_closed");
+                        document.querySelector(".app_widget .phone_window").classList.remove("window_closed");
                         open_widget = false;
                     }
                 });
