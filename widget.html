@@ -340,7 +340,7 @@
             function app_widget(){
                 //close_window
                 let open_widget = false;
-                const get_close_icon = document.querySelector(".app_widget .phone_window .window_options svg");
+                const get_close_icon = document.querySelector(".app_widget .window_options svg");
                 get_close_icon.addEventListener("click", function (){
                     this.closest(".phone_window").classList.add("window_closed");
                     open_widget = true;
